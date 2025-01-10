@@ -1,3 +1,5 @@
+// import String.class from java.lang package to use built-in .replace() method -- otw will have to create a loop and yada yada yada 
+import java.lang.String;
 
 public class RemoveAllCharacter {
     /**
@@ -12,6 +14,12 @@ public class RemoveAllCharacter {
      * @return str, without any characters of type ch.
      */
     public String removeAll(String str, String ch){
-        return null;
+        // https://stackoverflow.com/questions/4576352/remove-all-occurrences-of-char-from-string
+        // implment String.replace(old char, new char) method to replace each instance of 'ch' w/ nothing
+        // Note: Since 'ch' was initialized w/ type of String, double quotes "" were used in 2nd params -- if 1st param single '', 2nd param must match ''
+        String newStr = str.replace(ch, "");   // could've been done recursively -- assign to 'str'
+        
+        // return 'newStr' w/o any inkling of char 'ch'
+        return newStr;
     }
 }
